@@ -4,7 +4,7 @@ import Link from "next/link";
 import Placeholder from "~/assets/placeholder.svg";
 
 type PortfolioCardProps = {
-  name: String;
+  name: string;
 };
 
 export default function PortfolioCard({ name }: PortfolioCardProps) {
