@@ -1,14 +1,3 @@
-import { Button } from "~/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "~/components/ui/card";
-import { Code2, Github } from "lucide-react";
-import Link from "next/link";
 import NavigationBar from "~/components/NavigationBar";
 import SignInCard from "~/components/SignInCard";
 import Footer from "~/components/Footer";
