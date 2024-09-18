@@ -1,3 +1,5 @@
+"use client";
+
 import { Github } from "lucide-react";
 import { Button } from "./ui/button";
 import {
@@ -9,8 +11,12 @@ import {
   CardFooter,
 } from "./ui/card";
 import Link from "next/link";
+import { signInAction } from "~/app/actions/supabase";
 
 export default function SignInCard() {
+  const handleSignIn = async () => {
+    await signInAction();
+  };
   return (
     <Card className="w-full max-w-md dark:bg-gray-800 ">
       <CardHeader className="space-y-1">
@@ -26,6 +32,7 @@ export default function SignInCard() {
           className="w-full dark:text-stone-50"
           variant="outline"
           type="button"
+          onClick={handleSignIn}
         >
           <Github className="mr-2 h-5 w-5" />
           Sign in with GitHub
