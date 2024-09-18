@@ -1,16 +1,19 @@
 "use server";
 
+import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { createClient } from "~/lib/supabase/server";
 import { encodedRedirect } from "~/lib/utils";
 
 export const signInAction = async () => {
   const supabase = createClient();
+  const headersList = headers();
+  const origin = headersList.get("origin") || "";
 
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: "github",
     options: {
-      redirectTo: "http://localhost:3000/auth/callback",
+      redirectTo: `${origin}/auth/callback`,
     },
   });
 
