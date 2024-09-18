@@ -1,7 +1,6 @@
 import { createClient } from "~/lib/supabase/server";
 import { InfoIcon } from "lucide-react";
 import { redirect } from "next/navigation";
-import { Button } from "~/components/ui/button";
 import SignOutButton from "~/components/SignOutButton";
 
 export default async function ProtectedPage() {
