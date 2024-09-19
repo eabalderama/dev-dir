@@ -5,11 +5,14 @@ import Link from "next/link";
 export default function NavigationBar() {
   return (
     <header className="px-4 lg:px-6 h-14 flex items-center">
-      <Link className="flex items-center justify-center" href="/">
+      <Link
+        className="flex items-center justify-center text-[#ededed]"
+        href="/"
+      >
         <Code2 className="h-6 w-6 mr-2" />
         <span className="font-bold">DevDir</span>
       </Link>
-      <nav className="ml-auto flex gap-2 sm:gap-6 items-center">
+      <nav className="ml-auto flex gap-2 sm:gap-6 items-center text-[#ededed]">
         <Link
           className="text-sm font-medium hover:underline underline-offset-4"
           href="#"
