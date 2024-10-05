@@ -1,12 +1,11 @@
 import { Code2, User, User2 } from "lucide-react";
 import Link from "next/link";
+import SignOutButton from "~/components/SignOutButton";
 import { Button } from "~/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "~/components/ui/dropdown-menu";
 
@@ -58,7 +57,9 @@ export default function DashboardLayout({
                   <p>My Profile</p>
                 </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem>Logout</DropdownMenuItem>
+              <DropdownMenuItem>
+                <SignOutButton />
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </nav>
