@@ -6,20 +6,8 @@ import {
   CardHeader,
   CardTitle,
 } from "~/components/ui/card";
-import { Input } from "~/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs";
-import {
-  Code2,
-  Github,
-  Linkedin,
-  Twitter,
-  User,
-  Briefcase,
-  Eye,
-  BarChart2,
-} from "lucide-react";
-import Link from "next/link";
-import Image from "next/image";
+import { Briefcase, Eye } from "lucide-react";
 import { createClient } from "~/lib/supabase/server";
 import { redirect } from "next/navigation";
 import DetailCard from "~/components/DetailCard";
@@ -71,8 +59,8 @@ export default async function Dashboard() {
                     </CardHeader>
                     <CardContent>
                       <p>
-                        Brief description of the project goes here. It's a
-                        summary of what the project is about.
+                        {`Brief description of the project goes here. It's a
+                        summary of what the project is about.`}
                       </p>
                     </CardContent>
                   </Card>

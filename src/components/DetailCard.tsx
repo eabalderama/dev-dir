@@ -1,4 +1,3 @@
-import { Eye } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import React from "react";
 
@@ -6,7 +5,7 @@ type DetailCardProps = {
   title: string;
   value: string;
   subtext?: string;
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
 };
 
 export default function DetailCard({
